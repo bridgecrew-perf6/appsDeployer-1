@@ -1,0 +1,46 @@
+const UpdateForm = ({
+    handleSubmit,
+    name,
+    setName,
+    email,
+    setEmail,
+    password,
+    setPassword
+}) => (
+    <form onSubmit={handleSubmit} className='mt-3'>
+        <div className='form-group mb-3'>
+            <label className='form-label'>Email</label>
+            <input
+                type='email'
+                className='form-control'
+                placeholder='Enter your email.'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+            />
+        </div>
+        <div className='form-group mb-3'>
+            <label className='form-label'>Name</label>
+            <input
+                type='text'
+                className='form-control'
+                placeholder='Enter your name.'
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+            />
+        </div>
+        <div className='form-group mb-3'>
+            <label className='form-label'>Password</label>
+            <input
+                type='password'
+                className='form-control'
+                placeholder='Enter password.'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+            />
+        </div>
+
+        <button className='btn btn-primary'>Update</button>
+    </form>
+);
+
+export default UpdateForm;
